@@ -31,6 +31,12 @@
     "url": "https://github.com/Knightplayzz/brawl-stars-node/issues"
   },
   "homepage": "https://github.com/Knightplayzz/brawl-stars-node#readme",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "node-fetch": "^3.3.2"
   },
