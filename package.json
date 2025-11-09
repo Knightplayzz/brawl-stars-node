@@ -1,8 +1,8 @@
 {
   "name": "brawl-stars-node",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "engines": {
-    "node": "v22.19.0"
+    "node": ">=20.14.0"
   },
   "type": "module",
   "description": "API wrapper for the official Brawl Stars API.",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Knightplayzz/brawl-stars.git"
+    "url": "git+https://github.com/Knightplayzz/brawl-stars-node.git"
   },
   "keywords": [
     "brawlstars",
@@ -28,9 +28,9 @@
   "author": "Philippe Smeets",
   "license": "CC BY-NC",
   "bugs": {
-    "url": "https://github.com/Knightplayzz/brawl-stars/issues"
+    "url": "https://github.com/Knightplayzz/brawl-stars-node/issues"
   },
-  "homepage": "https://github.com/Knightplayzz/brawl-stars#readme",
+  "homepage": "https://github.com/Knightplayzz/brawl-stars-node#readme",
   "dependencies": {
     "node-fetch": "^3.3.2"
   },
