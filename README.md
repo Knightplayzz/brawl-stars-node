@@ -1,43 +1,104 @@
 <div align="center">
- <img src="https://static.wikia.nocookie.net/supercell-fankit/images/f/ff/Brawl_Stars_Smile_Logo.png/revision/latest/scale-to-width-down/250?cb=20201119180831" height="200px"  alt="Brawl Stars"/>
- <br>
- <p>A light-weight module that makes <a href="https://developer.brawlstars.com/">Brawl Stars API</a> become easy.</p>
- <a href=""><img src="https://app.travis-ci.com/Knightplayzz/brawl-stars.svg?branch=main"></a>
- <a href='https://coveralls.io/github/Knightplayzz/brawl-stars?branch=main'><img src='https://coveralls.io/repos/github/Knightplayzz/brawl-stars/badge.svg?branch=main' alt='Coverage Status' /></a>
- <a href="https://www.npmjs.com/package/brawl-stars-node"><img src="https://img.shields.io/npm/dt/brawl-stars-node.svg?maxAge=3600"></a>
+ <img src="https://static.wikia.nocookie.net/supercell-fankit/images/f/ff/Brawl_Stars_Smile_Logo.png/revision/latest/scale-to-width-down/250?cb=20201119180831" height="200px" alt="Brawl Stars Logo"/>
+ <br><br>
+ <p><b>A lightweight Node.js wrapper for the <a href="https://developer.brawlstars.com/">Brawl Stars API</a>, designed to make interaction simple and efficient.</b></p>
+ 
+ <a href="https://app.travis-ci.com/Knightplayzz/brawl-stars"><img src="https://app.travis-ci.com/Knightplayzz/brawl-stars.svg?branch=main" alt="Build Status"></a>
+ <a href="https://www.npmjs.com/package/brawl-stars-node"><img src="https://img.shields.io/npm/v/brawl-stars-node" alt="NPM Version"></a>
+ <a href="https://www.npmjs.com/package/brawl-stars-node"><img src="https://img.shields.io/npm/dt/brawl-stars-node.svg?maxAge=3600" alt="NPM Downloads"></a>
+ <a href="https://packagephobia.com/result?p=brawl-stars-node"><img src="https://packagephobia.com/badge?p=brawl-stars-node" alt="Install Size"></a>
+ <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-Ready-3178C6?logo=typescript&logoColor=white" alt="TypeScript"></a>
+</div>
 
-<a href="https://www.npmjs.com/package/brawl-stars-node"><img src="https://img.shields.io/npm/v/brawl-stars-node" alt="Install size"></a>
- <a href="https://packagephobia.now.sh/result?p=brawl-stars-node"><img src="https://packagephobia.com/badge?p=brawl-stars-node" alt="Current version"></a>
- </div>
+---
 
-# Introduction
+## 🚀 Introduction
 
-Provides an easy way to get started with the [Brawl Stars API](https://developer.brawlstars.com/)
-For more information about the responses please check [Official Brawl Stars Dev Website](https://developer.brawlstars.com/#/documentation).
-Not releated to Supercell.
-Created By: Philippe Smeets
+**brawl-stars-node** provides an easy and efficient way to interact with the official [Brawl Stars API](https://developer.brawlstars.com/).  
+It simplifies authentication, handles rate limits, and caches responses — so you can focus on building features, not managing requests.
 
-## Installation
+> ⚠️ Not affiliated with or endorsed by Supercell.
 
-`npm install brawl-stars-node`
+**Author:** Philippe Smeets
 
-## Links
+---
 
-- [Documentation](https://github.com/Knightplayzz/brawl-stars/blob/main/documentation.md)
-- [Brawl Stars Developer Website](https://developer.brawlstars.com/#/documentation)
+## 📦 Installation
 
-## Example
+```bash
+npm install brawl-stars-node
+````
 
-```javascript
-const client = require('brawl-stars-node');
-async function myFunction() {
-    await client.login('YOUR-TOKEN-HERE');
-    const player = await client.getPlayer('PLAYER-TAG-HERE');
-    console.log(`${player.name} (${player.tag})`);
-}
-myFunction();
+If you’re using TypeScript:
+
+```bash
+npm install --save-dev typescript
 ```
 
-### Disclaimer
+---
 
-> This content is not affiliated with, endorsed, sponsored, or specifically approved by Supercell and Supercell is not responsible for it. For more information see Supercell's Fan Content Policy: <www.supercell.com/en/fan-content-policy/>
+## 📚 Documentation & Links
+
+* [📘 Documentation](https://github.com/Knightplayzz/brawl-stars/blob/main/documentation.md)
+* [💻 Official Brawl Stars API](https://developer.brawlstars.com/#/documentation)
+* [🧠 Changelog](https://github.com/Knightplayzz/brawl-stars/blob/main/CHANGELOG.md)
+* [🔒 Security Policy](https://github.com/Knightplayzz/brawl-stars/blob/main/SECURITY.md)
+
+---
+
+## 💡 Example Usage
+
+```typescript
+import { BrawlStarsClient } from 'brawl-stars-node';
+
+const client = new BrawlStarsClient('YOUR-TOKEN-HERE');
+
+async function main() {
+    const player = await client.players.get('PLAYER-TAG-HERE');
+    console.log(`${player.name} (${player.tag})`);
+}
+
+main();
+```
+
+---
+
+## ⚙️ Features
+
+- ✅ Simple authentication
+- ✅ Fully written in TypeScript
+- ✅ Built-in caching system
+- ✅ Automatic rate limiting (5 requests/sec)
+- ✅ Structured response types
+- ✅ Easy-to-use endpoint access (Players, Clubs, Rankings, Events, etc.)
+- ✅ Tested with Jest + integrated CI/CD
+
+---
+
+## 🧩 API Overview
+
+| Category     | Method                                       | Description                         |
+| ------------ | -------------------------------------------- | ----------------------------------- |
+| **Players**  | `get(tag)`                                   | Fetch player data                   |
+| **Players**  | `getBattlelog(tag)`                          | Fetch player’s recent battles       |
+| **Clubs**    | `get(tag)`                                   | Fetch club information              |
+| **Clubs**    | `getMembers(tag)`                            | Fetch club member list              |
+| **Rankings** | `getPlayerRankings(countryCode)`             | Get player leaderboard              |
+| **Rankings** | `getClubRankings(countryCode)`               | Get club leaderboard                |
+| **Rankings** | `getBrawlerRankings(countryCode, brawlerId)` | Get rankings for a specific brawler |
+| **Brawlers** | `getAll()`                                   | Get all brawlers                    |
+| **Brawlers** | `getById(brawlerId)`                         | Get specific brawler info           |
+| **Events**   | `getRotation()`                              | Get current and upcoming events     |
+
+---
+
+## ⚠️ Disclaimer
+
+This project is **not affiliated with, endorsed, sponsored, or specifically approved by Supercell**.
+Supercell is not responsible for it.
+For more information, please refer to Supercell’s [Fan Content Policy](https://www.supercell.com/en/fan-content-policy/).
+
+---
+
+**© 2025 – Philippe Smeets**
+📧 [philippesmeets@icloud.com](mailto:philippesmeets@icloud.com)

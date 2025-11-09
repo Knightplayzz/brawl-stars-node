@@ -3,7 +3,24 @@ sudo: false
 language: node_js
 
 node_js:
-  - 16.18.0
+  - 18   # LTS version
+  - 20   # optional latest Node version for compatibility testing
+
+cache:
+  npm: true
+  directories:
+    - node_modules
+
+install:
+  - npm ci
 
 before_install:
   - npm i -g npm@9.8.1
+
+script:
+  - npm run lint      # ESLint
+  - npm run build     # TypeScript compilation
+  - npm test          # Jest tests
+
+notifications:
+  email: false
