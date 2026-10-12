@@ -1,5 +1,5 @@
-import { BrawlStarsClient, Json } from '../../client.js';
-import { validateTag } from '../../utils/validation.js';
+import { BrawlStarsClient, Json } from "../../client.js";
+import { validateTag } from "../../utils/validation.js";
 
 /**
  * Retrieves player information by playerTag.
@@ -8,9 +8,9 @@ import { validateTag } from '../../utils/validation.js';
  * @returns JSON data of the player
  */
 export default (client: BrawlStarsClient) =>
-    async (playerTag: string, options?: { cacheSeconds?: number }): Promise<Json> => {
-        validateTag(playerTag, 'player');
+  async (playerTag: string, options?: { cacheSeconds?: number }): Promise<Json> => {
+    validateTag(playerTag, "player");
 
-        const cacheDuration = options?.cacheSeconds ?? 0;
-        return client.fetch(`/players/${encodeURIComponent(playerTag)}`, { cacheSeconds: cacheDuration });
-    };
+    const cacheDuration = options?.cacheSeconds ?? 0;
+    return client.fetch(`/players/${encodeURIComponent(playerTag)}`, { cacheSeconds: cacheDuration });
+  };

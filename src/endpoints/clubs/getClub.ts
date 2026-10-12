@@ -1,5 +1,5 @@
-import { BrawlStarsClient, Json } from '../../client.js';
-import { validateTag } from '../../utils/validation.js';
+import { BrawlStarsClient, Json } from "../../client.js";
+import { validateTag } from "../../utils/validation.js";
 
 /**
  * Retrieves club information by clubTag.
@@ -8,10 +8,10 @@ import { validateTag } from '../../utils/validation.js';
  * @returns JSON data of the requested club
  */
 export default (client: BrawlStarsClient) =>
-    async (clubTag: string, options?: { cacheSeconds?: number }): Promise<Json> => {
+  async (clubTag: string, options?: { cacheSeconds?: number }): Promise<Json> => {
     // Validate the clubTag
-        validateTag(clubTag, 'club');
+    validateTag(clubTag, "club");
 
-        const cacheDuration = options?.cacheSeconds ?? 0;
-        return client.fetch(`/clubs/${encodeURIComponent(clubTag)}`, { cacheSeconds: cacheDuration });
-    };
+    const cacheDuration = options?.cacheSeconds ?? 0;
+    return client.fetch(`/clubs/${encodeURIComponent(clubTag)}`, { cacheSeconds: cacheDuration });
+  };

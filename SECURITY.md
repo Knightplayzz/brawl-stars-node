@@ -4,10 +4,10 @@
 
 We currently support and patch the following versions of **brawl-stars-node**:
 
-| Version | Supported |
-|----------|------------|
-| 2.x.x    | ✅ Active Support |
-| 1.0.0  | ❌ No longer supported |
+| Version | Supported              |
+| ------- | ---------------------- |
+| 3.x.x   | ✅ Active Support      |
+| 2.0.0   | ❌ No longer supported |
 
 If you’re using an older version, please upgrade to the latest release on [npm](https://www.npmjs.com/package/brawl-stars-node).
 
@@ -22,6 +22,7 @@ Instead, report it responsibly by sending a detailed email to:
 📧 **philippesmeets@icloud.com**
 
 Please include:
+
 - A clear description of the vulnerability.
 - Steps to reproduce (if possible).
 - Any relevant code snippets or logs.
@@ -41,6 +42,7 @@ Please include:
 ## Security Best Practices
 
 When using this package:
+
 - Never share your **Brawl Stars API token** publicly.
 - Always **store tokens in environment variables** or secure configuration files.
 - Use **latest versions** of Node.js and dependencies.
@@ -51,11 +53,13 @@ When using this package:
 ## Scope
 
 This policy applies to vulnerabilities found in:
+
 - Source code under [`/src`](https://github.com/Knightplayzz/brawl-stars/tree/main/src)
 - Build and runtime scripts
 - Published NPM package `brawl-stars-node`
 
 It does **not** apply to:
+
 - Third-party libraries used in this project
 - Brawl Stars API itself (report those to [Supercell](https://supercell.com/en/fan-content-policy/))
 
