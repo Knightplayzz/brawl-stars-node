@@ -3,6 +3,7 @@
   <br><br>
   <p><b>A lightweight, strongly typed Node.js wrapper for the official <a href="https://developer.brawlstars.com/">Brawl Stars API</a>.</b></p>
 
+<a href="https://github.com/Knightplayzz/brawl-stars-node/actions/workflows/ci.yml"><img src="https://github.com/Knightplayzz/brawl-stars-node/actions/workflows/ci.yml/badge.svg" alt="Build Status"></a>
 <a href='https://coveralls.io/github/Knightplayzz/brawl-stars-node?branch=main'><img src='https://coveralls.io/repos/github/Knightplayzz/brawl-stars-node/badge.svg?branch=main' alt='Coverage Status' /></a>
 <a href="https://www.npmjs.com/package/brawl-stars-node"><img src="https://img.shields.io/npm/dt/brawl-stars-node.svg?maxAge=3600" alt="npm downloads"></a>
 
