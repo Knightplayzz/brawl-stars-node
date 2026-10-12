@@ -1,7 +1,30 @@
-node_modules/
-__tests__/
+# Dependencies
+/node_modules/
+
+# Generated build and coverage output
+/dist/
+/coverage/
+
+# Local environment secrets; keep safe example templates trackable
 .env
-package-lock.json
+.env.*
+!.env.example
+!.env.*.example
+
+# TypeScript incremental compiler cache
+*.tsbuildinfo
+
+# Logs and local npm package archives
+*.log
+*.tgz
+
+# Local editor and operating system files
 .vscode/
-coverage/
-dist/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+*.tmp
+*.temp
