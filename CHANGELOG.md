@@ -4,7 +4,7 @@ All notable changes to **brawl-stars-node** will be documented in this file.
 
 ---
 
-## [3.0.0] - 12/10/2026
+## [3.0.0] - 12-10-2026
 
 ### Added
 
@@ -95,5 +95,5 @@ The first major release of **brawl-stars-node** — a lightweight and developer-
 
 ### 🧪 Beta Release
 
-**Created and maintained by [Philippe Smeets](mailto:philippesmeets@icloud.com)**  
+**Created and maintained by [Philippe Smeets](mailto:philippesmeets@icloud.com)**
 © 2025 — Not affiliated with or endorsed by Supercell.
