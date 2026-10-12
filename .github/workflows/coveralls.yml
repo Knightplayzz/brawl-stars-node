@@ -1,23 +1,28 @@
-on: ["push", "pull_request"]
+name: Coveralls
 
-name: Test Coveralls
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
 
 jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
 
-      - name: Use Node.js 20.14.0
+      - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20.14.0
+          node-version: 24
 
-      - name: npm install, make test-coverage
+      - name: Install dependencies and run tests
         run: |
-          npm install
-          npm test -- --coverage
+          npm ci
+          npm test
 
       - name: Coveralls
         uses: coverallsapp/github-action@v2

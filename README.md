@@ -3,8 +3,11 @@
   <br><br>
   <p><b>A lightweight, strongly typed Node.js wrapper for the official <a href="https://developer.brawlstars.com/">Brawl Stars API</a>.</b></p>
 
-<a href="https://www.npmjs.com/package/brawl-stars-node"><img src="https://img.shields.io/npm/v/brawl-stars-node" alt="npm version"></a>
+<a href='https://coveralls.io/github/Knightplayzz/brawl-stars-node?branch=main'><img src='https://coveralls.io/repos/github/Knightplayzz/brawl-stars-node/badge.svg?branch=main' alt='Coverage Status' /></a>
 <a href="https://www.npmjs.com/package/brawl-stars-node"><img src="https://img.shields.io/npm/dt/brawl-stars-node.svg?maxAge=3600" alt="npm downloads"></a>
+
+<a href="https://www.npmjs.com/package/brawl-stars-node"><img src="https://img.shields.io/npm/v/brawl-stars-node" alt="npm version"></a>
+<a href="https://packagephobia.now.sh/result?p=brawl-stars-node"><img src="https://badgen.net/packagephobia/install/brawl-stars-node" alt="Current version"></a>
 <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-Ready-3178C6?logo=typescript&logoColor=white" alt="TypeScript ready"></a>
 </div>
 
